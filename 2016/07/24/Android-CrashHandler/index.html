@@ -3,19 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Charles Wei&#39;s Blog | Why so serious?</title>
+  <title>Android_CrashHandler | Charles Wei&#39;s Blog | Why so serious?</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="Android Coder">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Charles Wei's Blog">
-<meta property="og:url" content="http://charleswei.me/index.html">
+  <meta name="keywords" content="Android">
+  <meta name="description" content="#当APP 异常崩溃时，使用Toast提示，并关闭APP，收集错误信息保存并上报
+需求：由于android机型的碎片化，我们在开发时无法对所以机型进行测试，因此在可能的崩溃发生时，我们应当做一些事情来为我们提供更多信息以便改进，同时也能然崩溃发生时的用户体验得到一些改善。例如程序崩溃后的重启APP、系统dialog等并不为我们想要，因此可以在APP崩溃时进行一些处理。由于现在一些第三方提供的崩溃日">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android_CrashHandler">
+<meta property="og:url" content="http://charleswei.me/2016/07/24/Android-CrashHandler/index.html">
 <meta property="og:site_name" content="Charles Wei's Blog">
+<meta property="og:description" content="#当APP 异常崩溃时，使用Toast提示，并关闭APP，收集错误信息保存并上报
+需求：由于android机型的碎片化，我们在开发时无法对所以机型进行测试，因此在可能的崩溃发生时，我们应当做一些事情来为我们提供更多信息以便改进，同时也能然崩溃发生时的用户体验得到一些改善。例如程序崩溃后的重启APP、系统dialog等并不为我们想要，因此可以在APP崩溃时进行一些处理。由于现在一些第三方提供的崩溃日">
+<meta property="og:updated_time" content="2016-07-24T09:24:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Charles Wei's Blog">
+<meta name="twitter:title" content="Android_CrashHandler">
+<meta name="twitter:description" content="#当APP 异常崩溃时，使用Toast提示，并关闭APP，收集错误信息保存并上报
+需求：由于android机型的碎片化，我们在开发时无法对所以机型进行测试，因此在可能的崩溃发生时，我们应当做一些事情来为我们提供更多信息以便改进，同时也能然崩溃发生时的用户体验得到一些改善。例如程序崩溃后的重启APP、系统dialog等并不为我们想要，因此可以在APP崩溃时进行一些处理。由于现在一些第三方提供的崩溃日">
   
     <link rel="alternative" href="/atom.xml" title="Charles Wei&#39;s Blog" type="application/atom+xml">
   
@@ -27,7 +34,7 @@
 <body>
   <div id="loading" class="active"></div>
 
-  <nav id="menu"  >
+  <nav id="menu" class="hide" >
    <div class="inner flex-row-vertical">
   <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
       <i class="icon icon-lg icon-close"></i>
@@ -43,7 +50,7 @@
   </div>
   <ul class="nav flex-col">
     
-        <li class="waves-block waves-effect active">
+        <li class="waves-block waves-effect">
           <a href="/"  >
             <i class="icon icon-lg icon-home"></i>
             主页
@@ -97,7 +104,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Charles Wei&#39;s Blog</div>
+        <div class="flex-col header-title ellipsis">Android_CrashHandler</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -118,45 +125,80 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">Charles Wei&#39;s Blog</h1>
+    <h1 class="author">Android_CrashHandler</h1>
     <h5 class="subtitle">
         
-        Why so serious?
+            <time datetime="2016-07-24T09:23:13.000Z" itemprop="datePublished" class="page-time">
+  2016-07-24
+</time>
+
+
         
     </h5>
   </div>
 </header>
 
     <div class="container body-wrap">
-      <ul class="post-list">
-  
-    <li class="post-list-item">
-        <article id="post-Android-CrashHandler" 
+      <article id="post-Android-CrashHandler" 
   class="article article-type-post" itemprop="blogPost">
-     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/07/24/Android-CrashHandler/">Android_CrashHandler</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time datetime="2016-07-24T09:23:13.000Z" itemprop="datePublished" class="post-time">
-  2016-07-24
-</time>
-
+    <div class="post-meat flex-row">
         
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
 
- 
     </div>
-    
-    <div class="post-content" id="post-content" itemprop="postContent" >
-    
-        <p>#当APP 异常崩溃时，使用Toast提示，并关闭APP，收集错误信息保存并上报</p>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码块"><span class="post-toc-number">1.</span> <span class="post-toc-text">代码块</span></a></li></ol>
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <p>#当APP 异常崩溃时，使用Toast提示，并关闭APP，收集错误信息保存并上报</p>
 <p>需求：由于android机型的碎片化，我们在开发时无法对所以机型进行测试，因此在可能的崩溃发生时，我们应当做一些事情来为我们提供更多信息以便改进，同时也能然崩溃发生时的用户体验得到一些改善。例如程序崩溃后的重启APP、系统dialog等并不为我们想要，因此可以在APP崩溃时进行一些处理。由于现在一些第三方提供的崩溃日志的捕获上传做得也不错，对于类似我们这些中小型公司，可以集成如腾讯的Bugly、百度的测试云平台等第三方SDK进行崩溃日志的收集及上传，在我们自定义的CrashHandler里做一些交互处理即可。如使用Toast进行崩溃提示、在崩溃时关掉APP避免重启。</p>
 <p>###步骤</p>
 <ul>
@@ -172,96 +214,37 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">    Util.addActivity(<span class="keyword">this</span>);</div><div class="line">    ......</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</div><div class="line">    removeActivity(_this);</div><div class="line">    ......</div><div class="line">    <span class="keyword">super</span>.onDestroy();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>最后在程序的一处写个异常如 <code>int i=1/0;</code> 运行到那里进行异常测试。</p>
 
-    
-    </div>
-    
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="http://charleswei.me/2016/07/24/Android-CrashHandler/" target="_blank" rel="external">http://charleswei.me/2016/07/24/Android-CrashHandler/</a>
+                </p>
+                <footer><cite><a href="http://charleswei.me">@Charles Wei's Blog</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
 
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2016/07/21/HowToInstallHexoForMac/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hexo的安装和使用（mac篇）</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+            
+            
+
+
+
+        </div>
+    </div>
 </article>
-    </li>
-  
-    <li class="post-list-item">
-        <article id="post-HowToInstallHexoForMac" 
-  class="article article-type-post" itemprop="blogPost">
-     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/07/21/HowToInstallHexoForMac/">Hexo的安装和使用（mac篇）</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time datetime="2016-07-21T13:54:41.000Z" itemprop="datePublished" class="post-time">
-  2016-07-21
-</time>
-
-        
-
- 
-    </div>
-    
-    <div class="post-content" id="post-content" itemprop="postContent" >
-    
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。官方文档<a href="https://hexo.io/zh-cn/docs/index.html">传送门</a>。Hexo的安装是个很快速简便的过程，但依然还是有不少坑。这里记录个我的安装过程，给大家一些参考。以下是我安装时系统及软件版本，请尽量保证不低于这些版本号：</p>
-<ul>
-<li><p>OS ： OS X EI Capitan 10.11.3</p>
-</li>
-<li><p>XCode : 7.3</p>
-</li>
-<li><p>hexo : 3.2.2</p>
-</li>
-<li><p>node : 4.4.7</p>
-</li>
-<li><p>git : 2.6.4</p>
-</li>
-</ul>
-    
-    </div>
-    
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-</article>
-    </li>
-  
-    <li class="post-list-item">
-        <article id="post-first-create" 
-  class="article article-type-post" itemprop="blogPost">
-     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/07/17/first-create/">first create</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time datetime="2016-07-17T14:26:06.000Z" itemprop="datePublished" class="post-time">
-  2016-07-17
-</time>
-
-        
-
- 
-    </div>
-    
-    <div class="post-content" id="post-content" itemprop="postContent" >
-    
-        
-    
-    </div>
-    
-</article>
-    </li>
-  
-</ul>
-
     </div>
   </main>
 <div class="mask" id="mask"></div>
@@ -269,10 +252,10 @@
 
 <script>
 var BLOG_SHARE = {
-    title: "Charles Wei's Blog",
+    title: "Android_CrashHandler",
     pic: "/img/logo.jpg",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://charleswei.me/index.html"
+    url: "http://charleswei.me/2016/07/24/Android-CrashHandler/index.html"
 };
 </script>
 <div class="global-share" id="global-share">
