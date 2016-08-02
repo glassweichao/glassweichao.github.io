@@ -1,198 +1,649 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
   
-  <title>Charles Wei&#39;s Blog | Why so serious?</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="theme-color" content="#3F51B5">
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
   
   
-  <meta name="keywords" content="Android Coder">
-  <meta property="og:type" content="website">
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta property="og:type" content="website">
 <meta property="og:title" content="Charles Wei's Blog">
 <meta property="og:url" content="http://charleswei.me/index.html">
 <meta property="og:site_name" content="Charles Wei's Blog">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Charles Wei's Blog">
-  
-    <link rel="alternative" href="/atom.xml" title="Charles Wei&#39;s Blog" type="application/atom+xml">
-  
-  <meta name="summary" content="null">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://charleswei.me/"/>
+
+  <title> Charles Wei's Blog </title>
 </head>
 
-<body>
-  <div id="loading" class="active"></div>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <nav id="menu"  >
-   <div class="inner flex-row-vertical">
-  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-      <i class="icon icon-lg icon-close"></i>
-  </a>
-  <div class="brand-wrap">
-    <div class="brand">
-      <a href="/" class="avatar"><img src="/img/logo.jpg"></a>
-      <hgroup class="introduce">
-        <h5 class="nickname">Charles Wei</h5>
-        <a href="mailto:charles.wei1920@gmail.com" title="charles.wei1920@gmail.com" class="mail">charles.wei1920@gmail.com</a>
-      </hgroup>
-    </div>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Charles Wei's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
-  <ul class="nav flex-col">
-    
-        <li class="waves-block waves-effect active">
-          <a href="/"  >
-            <i class="icon icon-lg icon-home"></i>
-            主页
-          </a>
-        </li>
-    
-        <li class="waves-block waves-effect">
-          <a href="/archives"  >
-            <i class="icon icon-lg icon-archives"></i>
-            Archives
-          </a>
-        </li>
-    
-        <li class="waves-block waves-effect">
-          <a href="/tags"  >
-            <i class="icon icon-lg icon-tags"></i>
-            Tags
-          </a>
-        </li>
-    
-        <li class="waves-block waves-effect">
-          <a href="https://github.com/glassweichao" target="_blank" >
-            <i class="icon icon-lg icon-github"></i>
-            Github
-          </a>
-        </li>
-    
-        <li class="waves-block waves-effect">
-          <a href="/404"  >
-            <i class="icon icon-lg icon-link"></i>
-            测试
-          </a>
-        </li>
-    
-  </ul>
-
-  <footer class="footer">
-  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
-  <p>Charles Wei&#39;s Blog &copy; 2016</p>
-  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
-  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
-  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
-</footer>
-
+  <p class="site-subtitle">Why so serious?</p>
 </div>
 
-  </nav>
-  <main id="main">
-    <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">Charles Wei&#39;s Blog</div>
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
         
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/24/Android-ImageView-scaleType/" itemprop="url">
+                  Android ImageView 的scaleType属性
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-24T19:12:32+08:00" content="2016-07-24">
+              2016-07-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
-        
-    </div>
-</header>
-<header class="content-header">
-  <div class="container">
-    <h1 class="author">Charles Wei&#39;s Blog</h1>
-    <h5 class="subtitle">
-        
-        Why so serious?
-        
-    </h5>
-  </div>
-</header>
-
-    <div class="container body-wrap">
-      <ul class="post-list">
-  
-    <li class="post-list-item">
-        <article id="post-Android-CrashHandler" 
-  class="article article-type-post" itemprop="blogPost">
-     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/07/24/Android-CrashHandler/">Android_CrashHandler</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time datetime="2016-07-24T09:23:13.000Z" itemprop="datePublished" class="post-time">
-  2016-07-24
-</time>
-
-        
-
- 
-    </div>
+      </header>
     
-    <div class="post-content" id="post-content" itemprop="postContent" >
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>##Android ImageView scaleType属性介绍<br>| 名称 | 含义  |<br>| ————- |————-|<br>| center | 使图像在视图中居中，不缩放 |<br>| centerCrop | 以填满视图为目的，以视图中心为基准，等比缩放图像，超过视图部分做剪裁 |<br>| centerInside | 在视图中居中完全显示图像 |<br>|matrix|从视图的左上角开始显示图像，超出视图大小部分做剪裁|<br>|fitCenter|图像等比例扩大或缩小到等于视图的宽度或高度，使图像完全显示，并居中|<br>|fitStart|等比例缩放图像使宽（高）等于视图的宽（高），使图像完全显示，并位于视图上部（左部）|<br>|fitEnd|等比例缩放图像使宽（高）等于视图的宽（高），使图像完全显示，并位于视图下部（右部）|<br>|fitXY|拉伸图像，使图像填满视图|</p>
+<hr>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/24/Android-ImageView-scaleType/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
-        <p>#当APP 异常崩溃时，使用Toast提示，并关闭APP，收集错误信息保存并上报</p>
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/24/Android-IDCard-verify/" itemprop="url">
+                  Android 身份证校验类
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-24T19:09:31+08:00" content="2016-07-24">
+              2016-07-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##校验身份证是否合法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IDCardUtil</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String errorInfo = <span class="string">""</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getErrorInfo</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> errorInfo;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">checkIDCard</span><span class="params">(String strIDCard)</span> </span>&#123;</div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            String[] verifyCodes = &#123;<span class="string">"1"</span>, <span class="string">"0"</span>, <span class="string">"x"</span>, <span class="string">"9"</span>, <span class="string">"8"</span>, <span class="string">"7"</span>, <span class="string">"6"</span>, <span class="string">"5"</span>, <span class="string">"4"</span>,</div><div class="line">                    <span class="string">"3"</span>, <span class="string">"2"</span>&#125;;</div><div class="line">            String[] wCodes = &#123;<span class="string">"7"</span>, <span class="string">"9"</span>, <span class="string">"10"</span>, <span class="string">"5"</span>, <span class="string">"8"</span>, <span class="string">"4"</span>, <span class="string">"2"</span>, <span class="string">"1"</span>, <span class="string">"6"</span>, <span class="string">"3"</span>, <span class="string">"7"</span>,</div><div class="line">                    <span class="string">"9"</span>, <span class="string">"10"</span>, <span class="string">"5"</span>, <span class="string">"8"</span>, <span class="string">"4"</span>, <span class="string">"2"</span>&#125;;</div><div class="line">            String exEnd = <span class="string">""</span>;  <span class="comment">//除最后一位</span></div><div class="line">            <span class="comment">// ================ 号码的长度 15位或18位 ================</span></div><div class="line">            <span class="keyword">if</span> (strIDCard.length() != <span class="number">15</span> &amp;&amp; strIDCard.length() != <span class="number">18</span>) &#123;</div><div class="line">                errorInfo = <span class="string">"身份证号码长度应该为15位或18位"</span>;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="comment">// ================ 数字 除最后一位都为数字 ================</span></div><div class="line">            <span class="keyword">if</span> (strIDCard.length() == <span class="number">18</span>) &#123;</div><div class="line">                exEnd = strIDCard.substring(<span class="number">0</span>, <span class="number">17</span>);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (strIDCard.length() == <span class="number">15</span>) &#123;</div><div class="line">                exEnd = strIDCard.substring(<span class="number">0</span>, <span class="number">6</span>) + <span class="string">"19"</span> + strIDCard.substring(<span class="number">6</span>, <span class="number">15</span>);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (!isNumeric(exEnd)) &#123;</div><div class="line">                errorInfo = <span class="string">"身份证15位号码都应为数字；18位号码除最后一位外，都应为数字"</span>;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="comment">// ================ 出生年月是否有效 ================</span></div><div class="line">            String strYear = exEnd.substring(<span class="number">6</span>, <span class="number">10</span>);<span class="comment">// 年份</span></div><div class="line">            String strMonth = exEnd.substring(<span class="number">10</span>, <span class="number">12</span>);<span class="comment">// 月份</span></div><div class="line">            String strDay = exEnd.substring(<span class="number">12</span>, <span class="number">14</span>);<span class="comment">// 月份</span></div><div class="line">            <span class="keyword">if</span> (!isDataFormat(strYear + <span class="string">"-"</span> + strMonth + <span class="string">"-"</span> + strDay)) &#123;</div><div class="line">                errorInfo = <span class="string">"身份证生日无效"</span>;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">            GregorianCalendar gc = <span class="keyword">new</span> GregorianCalendar();</div><div class="line">            SimpleDateFormat s = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>);</div><div class="line">            <span class="keyword">if</span> ((gc.get(Calendar.YEAR) - Integer.parseInt(strYear)) &gt; <span class="number">150</span></div><div class="line">                    || (gc.getTime().getTime() - s.parse(</div><div class="line">                    strYear + <span class="string">"-"</span> + strMonth + <span class="string">"-"</span> + strDay).getTime()) &lt; <span class="number">0</span>) &#123;</div><div class="line">                errorInfo = <span class="string">"身份证生日不在有效范围"</span>;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (Integer.parseInt(strMonth) &gt; <span class="number">12</span> || Integer.parseInt(strMonth) == <span class="number">0</span>) &#123;</div><div class="line">                errorInfo = <span class="string">"身份证月份无效"</span>;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (Integer.parseInt(strDay) &gt; <span class="number">31</span> || Integer.parseInt(strDay) == <span class="number">0</span>) &#123;</div><div class="line">                errorInfo = <span class="string">"身份证日期无效"</span>;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="comment">// ================ 地区码是否有效 ================</span></div><div class="line">            Hashtable h = GetAreaCode();</div><div class="line">            <span class="keyword">if</span> (h.get(exEnd.substring(<span class="number">0</span>, <span class="number">2</span>)) == <span class="keyword">null</span>) &#123;</div><div class="line">                errorInfo = <span class="string">"身份证地区编码错误。"</span>;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="comment">// ================ 最后一位校验位计算 ================</span></div><div class="line">            <span class="keyword">int</span> totalMul = <span class="number">0</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">17</span>; i++) &#123;</div><div class="line">                totalMul = totalMul</div><div class="line">                        + Integer.parseInt(String.valueOf(exEnd.charAt(i)))</div><div class="line">                        * Integer.parseInt(wCodes[i]);</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">int</span> modValue = totalMul % <span class="number">11</span>;</div><div class="line">            String strVerifyCode = verifyCodes[modValue];</div><div class="line">            exEnd = exEnd + strVerifyCode;</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (strIDCard.length() == <span class="number">18</span>) &#123;</div><div class="line">                <span class="keyword">if</span> (!exEnd.equals(strIDCard)) &#123;</div><div class="line">                    errorInfo = <span class="string">"身份证无效，不是合法的身份证号码"</span>;</div><div class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">                &#125;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">            MyLog.info(e);</div><div class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 功能：设置地区编码</div><div class="line">     *</div><div class="line">     * <span class="doctag">@return</span> Hashtable 对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Hashtable <span class="title">GetAreaCode</span><span class="params">()</span> </span>&#123;</div><div class="line">        Hashtable hashtable = <span class="keyword">new</span> Hashtable();</div><div class="line">        hashtable.put(<span class="string">"11"</span>, <span class="string">"北京"</span>);</div><div class="line">        hashtable.put(<span class="string">"12"</span>, <span class="string">"天津"</span>);</div><div class="line">        hashtable.put(<span class="string">"13"</span>, <span class="string">"河北"</span>);</div><div class="line">        hashtable.put(<span class="string">"14"</span>, <span class="string">"山西"</span>);</div><div class="line">        hashtable.put(<span class="string">"15"</span>, <span class="string">"内蒙古"</span>);</div><div class="line">        hashtable.put(<span class="string">"21"</span>, <span class="string">"辽宁"</span>);</div><div class="line">        hashtable.put(<span class="string">"22"</span>, <span class="string">"吉林"</span>);</div><div class="line">        hashtable.put(<span class="string">"23"</span>, <span class="string">"黑龙江"</span>);</div><div class="line">        hashtable.put(<span class="string">"31"</span>, <span class="string">"上海"</span>);</div><div class="line">        hashtable.put(<span class="string">"32"</span>, <span class="string">"江苏"</span>);</div><div class="line">        hashtable.put(<span class="string">"33"</span>, <span class="string">"浙江"</span>);</div><div class="line">        hashtable.put(<span class="string">"34"</span>, <span class="string">"安徽"</span>);</div><div class="line">        hashtable.put(<span class="string">"35"</span>, <span class="string">"福建"</span>);</div><div class="line">        hashtable.put(<span class="string">"36"</span>, <span class="string">"江西"</span>);</div><div class="line">        hashtable.put(<span class="string">"37"</span>, <span class="string">"山东"</span>);</div><div class="line">        hashtable.put(<span class="string">"41"</span>, <span class="string">"河南"</span>);</div><div class="line">        hashtable.put(<span class="string">"42"</span>, <span class="string">"湖北"</span>);</div><div class="line">        hashtable.put(<span class="string">"43"</span>, <span class="string">"湖南"</span>);</div><div class="line">        hashtable.put(<span class="string">"44"</span>, <span class="string">"广东"</span>);</div><div class="line">        hashtable.put(<span class="string">"45"</span>, <span class="string">"广西"</span>);</div><div class="line">        hashtable.put(<span class="string">"46"</span>, <span class="string">"海南"</span>);</div><div class="line">        hashtable.put(<span class="string">"50"</span>, <span class="string">"重庆"</span>);</div><div class="line">        hashtable.put(<span class="string">"51"</span>, <span class="string">"四川"</span>);</div><div class="line">        hashtable.put(<span class="string">"52"</span>, <span class="string">"贵州"</span>);</div><div class="line">        hashtable.put(<span class="string">"53"</span>, <span class="string">"云南"</span>);</div><div class="line">        hashtable.put(<span class="string">"54"</span>, <span class="string">"西藏"</span>);</div><div class="line">        hashtable.put(<span class="string">"61"</span>, <span class="string">"陕西"</span>);</div><div class="line">        hashtable.put(<span class="string">"62"</span>, <span class="string">"甘肃"</span>);</div><div class="line">        hashtable.put(<span class="string">"63"</span>, <span class="string">"青海"</span>);</div><div class="line">        hashtable.put(<span class="string">"64"</span>, <span class="string">"宁夏"</span>);</div><div class="line">        hashtable.put(<span class="string">"65"</span>, <span class="string">"新疆"</span>);</div><div class="line">        hashtable.put(<span class="string">"71"</span>, <span class="string">"台湾"</span>);</div><div class="line">        hashtable.put(<span class="string">"81"</span>, <span class="string">"香港"</span>);</div><div class="line">        hashtable.put(<span class="string">"82"</span>, <span class="string">"澳门"</span>);</div><div class="line">        hashtable.put(<span class="string">"91"</span>, <span class="string">"国外"</span>);</div><div class="line">        <span class="keyword">return</span> hashtable;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 验证日期字符串是否是YYYY-MM-DD格式</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> str</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isDataFormat</span><span class="params">(String str)</span> </span>&#123;</div><div class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</div><div class="line">        String regxStr = <span class="string">"^((\\d&#123;2&#125;(([02468][048])|([13579][26]))[\\-\\/\\s]?((((0?[13578])|(1[02]))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])))))|(\\d&#123;2&#125;(([02468][1235679])|([13579][01345789]))[\\-\\/\\s]?((((0?[13578])|(1[02]))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(3[01])))|(((0?[469])|(11))[\\-\\/\\s]?((0?[1-9])|([1-2][0-9])|(30)))|(0?2[\\-\\/\\s]?((0?[1-9])|(1[0-9])|(2[0-8]))))))(\\s(((0?[0-9])|([1-2][0-3]))\\:([0-5]?[0-9])((\\s)|(\\:([0-5]?[0-9])))))?$"</span>;</div><div class="line">        Pattern pattern1 = Pattern.compile(regxStr);</div><div class="line">        Matcher isNo = pattern1.matcher(str);</div><div class="line">        <span class="keyword">if</span> (isNo.matches()) &#123;</div><div class="line">            flag = <span class="keyword">true</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> flag;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 功能：判断字符串是否为数字</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> str</div><div class="line">     * <span class="doctag">@return</span></div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isNumeric</span><span class="params">(String str)</span> </span>&#123;</div><div class="line">        Pattern pattern = Pattern.compile(<span class="string">"[0-9]*"</span>);</div><div class="line">        Matcher isNum = pattern.matcher(str);</div><div class="line">        <span class="keyword">if</span> (isNum.matches()) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/24/Android-CrashHandler/" itemprop="url">
+                  Android_CrashHandler 自定义崩溃异常捕获
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-24T17:23:13+08:00" content="2016-07-24">
+              2016-07-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>#当APP 异常崩溃时，使用Toast提示，并关闭APP，收集错误信息保存并上报</p>
 <p>需求：由于android机型的碎片化，我们在开发时无法对所以机型进行测试，因此在可能的崩溃发生时，我们应当做一些事情来为我们提供更多信息以便改进，同时也能然崩溃发生时的用户体验得到一些改善。例如程序崩溃后的重启APP、系统dialog等并不为我们想要，因此可以在APP崩溃时进行一些处理。由于现在一些第三方提供的崩溃日志的捕获上传做得也不错，对于类似我们这些中小型公司，可以集成如腾讯的Bugly、百度的测试云平台等第三方SDK进行崩溃日志的收集及上传，在我们自定义的CrashHandler里做一些交互处理即可。如使用Toast进行崩溃提示、在崩溃时关掉APP避免重启。</p>
-    
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/24/Android-CrashHandler/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
     </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-
-</article>
-    </li>
-  
-    <li class="post-list-item">
-        <article id="post-HowToInstallHexoForMac" 
-  class="article article-type-post" itemprop="blogPost">
-     
-
+      
 
   
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/07/21/HowToInstallHexoForMac/">Hexo的安装和使用（mac篇）</a>
-    </h3>
   
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
-    <div class="post-meta">
-        <time datetime="2016-07-21T13:54:41.000Z" itemprop="datePublished" class="post-time">
-  2016-07-21
-</time>
+    
+      <header class="post-header">
 
         
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/21/HowToInstallHexoForMac/" itemprop="url">
+                  Hexo的安装和使用（mac篇）
+                </a>
+              
+            
+          </h1>
+        
 
- 
-    </div>
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-21T21:54:41+08:00" content="2016-07-21">
+              2016-07-21
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
-    <div class="post-content" id="post-content" itemprop="postContent" >
-    
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。官方文档<a href="https://hexo.io/zh-cn/docs/index.html">传送门</a>。Hexo的安装是个很快速简便的过程，但依然还是有不少坑。这里记录个我的安装过程，给大家一些参考。以下是我安装时系统及软件版本，请尽量保证不低于这些版本号：</p>
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。官方文档<a href="https://hexo.io/zh-cn/docs/index.html">传送门</a>。Hexo的安装是个很快速简便的过程，但依然还是有不少坑。这里记录个我的安装过程，给大家一些参考。以下是我安装时系统及软件版本，请尽量保证不低于这些版本号：</p>
 <ul>
 <li><p>OS ： OS X EI Capitan 10.11.3</p>
 </li>
@@ -205,91 +656,180 @@
 <li><p>git : 2.6.4</p>
 </li>
 </ul>
-    
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/21/HowToInstallHexoForMac/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
     </div>
-    
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
-</article>
-    </li>
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
   
-</ul>
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/joker_head.jpg"
+               alt="Charles Wei" />
+          <p class="site-author-name" itemprop="name">Charles Wei</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/glassweichao" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
 
     </div>
-  </main>
-<div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
-
-<script>
-var BLOG_SHARE = {
-    title: "Charles Wei's Blog",
-    pic: "/img/logo.jpg",
-    summary: document.getElementsByName('summary')[0].content,
-    url: "http://charleswei.me/index.html"
-};
-</script>
-<div class="global-share" id="global-share">
-    <div class="tit">分享到：</div>
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
-        </a>
-      </li>
-    </ul>
- </div>
+  </aside>
 
 
+        
+      </div>
+    </main>
 
-<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-
-<script src="/js/main.js"></script>
-
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Charles Wei</span>
 </div>
-<script type="text/template" id="search-tpl">
-<li class="item">
-    <a href="/{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<script src="/js/search.js"></script>
 
 
 
@@ -298,6 +838,67 @@ var BLOG_SHARE = {
 
 
 
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>

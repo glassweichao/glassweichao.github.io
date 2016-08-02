@@ -1,0 +1,687 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android,ImageView," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="##Android ImageView scaleType属性介绍| 名称 | 含义  || ————- |————-|| center | 使图像在视图中居中，不缩放 || centerCrop | 以填满视图为目的，以视图中心为基准，等比缩放图像，超过视图部分做剪裁 || centerInside | 在视图中居中完全显示图像 ||matrix|从视图的左上角开始显示图像，超出视图大小部分做剪">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android ImageView 的scaleType属性">
+<meta property="og:url" content="http://charleswei.me/2016/07/24/Android-ImageView-scaleType/index.html">
+<meta property="og:site_name" content="Charles Wei's Blog">
+<meta property="og:description" content="##Android ImageView scaleType属性介绍| 名称 | 含义  || ————- |————-|| center | 使图像在视图中居中，不缩放 || centerCrop | 以填满视图为目的，以视图中心为基准，等比缩放图像，超过视图部分做剪裁 || centerInside | 在视图中居中完全显示图像 ||matrix|从视图的左上角开始显示图像，超出视图大小部分做剪">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712224500314">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712213637817">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712213956102">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712215551592">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712215745158">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712220431682">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712220456370">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712220535100">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712221108050">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712221140086">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712222221075">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712222236763">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712222249981">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712223634879">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712223651973">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712223708067">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712223726239">
+<meta property="og:image" content="http://img.blog.csdn.net/20160712224406491">
+<meta property="og:updated_time" content="2016-08-02T12:39:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android ImageView 的scaleType属性">
+<meta name="twitter:description" content="##Android ImageView scaleType属性介绍| 名称 | 含义  || ————- |————-|| center | 使图像在视图中居中，不缩放 || centerCrop | 以填满视图为目的，以视图中心为基准，等比缩放图像，超过视图部分做剪裁 || centerInside | 在视图中居中完全显示图像 ||matrix|从视图的左上角开始显示图像，超出视图大小部分做剪">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160712224500314">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://charleswei.me/2016/07/24/Android-ImageView-scaleType/"/>
+
+  <title> Android ImageView 的scaleType属性 | Charles Wei's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Charles Wei's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Why so serious?</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android ImageView 的scaleType属性
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-24T19:12:32+08:00" content="2016-07-24">
+              2016-07-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>##Android ImageView scaleType属性介绍<br>| 名称 | 含义  |<br>| ————- |————-|<br>| center | 使图像在视图中居中，不缩放 |<br>| centerCrop | 以填满视图为目的，以视图中心为基准，等比缩放图像，超过视图部分做剪裁 |<br>| centerInside | 在视图中居中完全显示图像 |<br>|matrix|从视图的左上角开始显示图像，超出视图大小部分做剪裁|<br>|fitCenter|图像等比例扩大或缩小到等于视图的宽度或高度，使图像完全显示，并居中|<br>|fitStart|等比例缩放图像使宽（高）等于视图的宽（高），使图像完全显示，并位于视图上部（左部）|<br>|fitEnd|等比例缩放图像使宽（高）等于视图的宽（高），使图像完全显示，并位于视图下部（右部）|<br>|fitXY|拉伸图像，使图像填满视图|</p>
+<hr>
+<a id="more"></a>
+<p>##示例及详解<br>示例原图<br><img src="http://img.blog.csdn.net/20160712224500314" alt="这里写图片描述"></p>
+<hr>
+<p>##<code>android:scaleType=&quot;center&quot;</code><br>保持图像的大小，将图像居中显示在视图中，若图像的尺寸大于视图的尺寸，则超出视图尺寸的部分将被剪裁。如图1-1，1-2：<br><img src="http://img.blog.csdn.net/20160712213637817" alt="图1-1"><br>图1-1</p>
+<p><img src="http://img.blog.csdn.net/20160712213956102" alt="图1-2"><br>图1-2</p>
+<hr>
+<p>##<code>android:scaleType=&quot;centerCrop&quot;</code><br>等比例放大图像，以视图中心为基准，填满整个视图，超过视图尺寸的部分将被剪裁。如图2-1，2-2：<br><img src="http://img.blog.csdn.net/20160712215551592" alt="图2-1 match_parent"><br>图2-1</p>
+<p><img src="http://img.blog.csdn.net/20160712215745158" alt="图2-2 固定ImageView大小"><br>图2-2</p>
+<hr>
+<p>##<code>android:scaleType=&quot;centerInside&quot;</code><br>等比例缩小图像以使图像完全显示在视图中，若图像尺寸小于视图尺寸，则不对图像进行处理，居中显示。若图像尺寸大于视图，则等比例缩小图像，使图像宽（高）等于或小于视图宽（高），居中显示。如图3-1，3-2，3-3：<br><img src="http://img.blog.csdn.net/20160712220431682" alt="图3-1"><br>图3-1</p>
+<p><img src="http://img.blog.csdn.net/20160712220456370" alt="图3-2 缩小图像高至等于视图高"><br>图3-2 缩小图像高至等于视图高</p>
+<p><img src="http://img.blog.csdn.net/20160712220535100" alt="图3-3缩小图像宽至等于视图宽"><br>图3-3 缩小图像宽至等于视图宽</p>
+<hr>
+<p>##<code>android:scaleType=&quot;matrix&quot;</code><br>不改变图像的大小，从左上角开始显示图像，图像尺寸若大于视图尺寸，则多余的部分会被裁剪。类似center，只是图像显示的位置不同。如图4-1，4-2：</p>
+<p><img src="http://img.blog.csdn.net/20160712221108050" alt="图4-1"><br>图4-1</p>
+<p><img src="http://img.blog.csdn.net/20160712221140086" alt="图4-2"><br>图4-2</p>
+<hr>
+<p>##<code>android:scaleType=&quot;fitCenter&quot;</code><br>等比例放大或缩小图像使图像的高（宽）等于视图的高（宽），然后居中显示。与center的区别是fitCenter不剪裁而是缩放，以使图像全部显示；与centerCrop的区别是fitCenter不以填满视图为目的，是以全部显示图像为目的；与centerInside的却别是fitCenter等比缩放至宽或高等于视图，而centerInside则只缩小不放大。如图5-1，5-2，5-3：</p>
+<p><img src="http://img.blog.csdn.net/20160712222221075" alt="图5-1"><br>图5-1</p>
+<p><img src="http://img.blog.csdn.net/20160712222236763" alt="图5-2"><br>图5-2</p>
+<p><img src="http://img.blog.csdn.net/20160712222249981" alt="图5-3"><br>图5-3</p>
+<hr>
+<p>##<code>android:scaleType=&quot;fitStart&quot;</code>  <code>android:scaleType=&quot;fitEnd&quot;</code><br>fitStart：等比例缩放图像使宽（高）等于视图的宽（高），使图像完全显示，并位于视图上部（左部）。fitEnd：等比例缩放图像使宽（高）等于视图的宽（高），使图像完全显示，并位于视图下部（右部）。与fitCenter类似，只是显示图片位置的区别。如图6-1，6-2，6-3，6-4：</p>
+<p><img src="http://img.blog.csdn.net/20160712223634879" alt="图6-1"><br>图6-1</p>
+<p><img src="http://img.blog.csdn.net/20160712223651973" alt="图6-2"><br>图6-2</p>
+<p><img src="http://img.blog.csdn.net/20160712223708067" alt="图6-3"><br>图6-3</p>
+<p><img src="http://img.blog.csdn.net/20160712223726239" alt="图6-4"><br>图6-4</p>
+<hr>
+<p>##<code>android:scaleType=&quot;fitXY&quot;</code><br>以填满整个视图为目的，拉伸图片。与centerCrop的区别是fitXY不剪裁，拉伸以使图像填满，图像会变形。如图7-1：</p>
+<p><img src="http://img.blog.csdn.net/20160712224406491" alt="图7-1"><br>图7-1</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag">#Android</a>
+          
+            <a href="/tags/ImageView/" rel="tag">#ImageView</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/24/Android-IDCard-verify/" rel="next" title="Android 身份证校验类">
+                <i class="fa fa-chevron-left"></i> Android 身份证校验类
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/joker_head.jpg"
+               alt="Charles Wei" />
+          <p class="site-author-name" itemprop="name">Charles Wei</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/glassweichao" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Charles Wei</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

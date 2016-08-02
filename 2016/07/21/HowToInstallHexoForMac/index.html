@@ -1,16 +1,90 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
   
-  <title>Hexo的安装和使用（mac篇） | Charles Wei&#39;s Blog | Why so serious?</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="theme-color" content="#3F51B5">
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
   
   
-  <meta name="keywords" content="hexo">
-  <meta name="description" content="前言Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。官方文档传送门。Hexo的安装是个很快速简便的过程，但依然还是有不少坑。这里记录个我的安装过程，给大家一些参考。以下是我安装时系统及软件版本，请尽量保证不低于这些版本号：
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="hexo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="前言Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。官方文档传送门。Hexo的安装是个很快速简便的过程，但依然还是有不少坑。这里记录个我的安装过程，给大家一些参考。以下是我安装时系统及软件版本，请尽量保证不低于这些版本号：
 
 OS ： OS X EI Capitan 10.11.3
 
@@ -32,194 +106,209 @@ XCode :">
 OS ： OS X EI Capitan 10.11.3
 
 XCode :">
-  
-    <link rel="alternative" href="/atom.xml" title="Charles Wei&#39;s Blog" type="application/atom+xml">
-  
-  <meta name="summary" content="&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。官方文档&lt;a href=&quot;https://hexo.io/zh-cn/docs/index.html&quot;&gt;传送门&lt;/a&gt;。Hexo的安装是个很快速简便的过程，但依然还是有不少坑。这里记录个我的安装过程，给大家一些参考。以下是我安装时系统及软件版本，请尽量保证不低于这些版本号：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;OS ： OS X EI Capitan 10.11.3&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;XCode : 7.3&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;hexo : 3.2.2&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;node : 4.4.7&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;git : 2.6.4&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://charleswei.me/2016/07/21/HowToInstallHexoForMac/"/>
+
+  <title> Hexo的安装和使用（mac篇） | Charles Wei's Blog </title>
 </head>
 
-<body>
-  <div id="loading" class="active"></div>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <nav id="menu" class="hide" >
-   <div class="inner flex-row-vertical">
-  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-      <i class="icon icon-lg icon-close"></i>
-  </a>
-  <div class="brand-wrap">
-    <div class="brand">
-      <a href="/" class="avatar"><img src="/img/logo.jpg"></a>
-      <hgroup class="introduce">
-        <h5 class="nickname">Charles Wei</h5>
-        <a href="mailto:charles.wei1920@gmail.com" title="charles.wei1920@gmail.com" class="mail">charles.wei1920@gmail.com</a>
-      </hgroup>
-    </div>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Charles Wei's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
-  <ul class="nav flex-col">
-    
-        <li class="waves-block waves-effect">
-          <a href="/"  >
-            <i class="icon icon-lg icon-home"></i>
-            主页
-          </a>
-        </li>
-    
-        <li class="waves-block waves-effect">
-          <a href="/archives"  >
-            <i class="icon icon-lg icon-archives"></i>
-            Archives
-          </a>
-        </li>
-    
-        <li class="waves-block waves-effect">
-          <a href="/tags"  >
-            <i class="icon icon-lg icon-tags"></i>
-            Tags
-          </a>
-        </li>
-    
-        <li class="waves-block waves-effect">
-          <a href="https://github.com/glassweichao" target="_blank" >
-            <i class="icon icon-lg icon-github"></i>
-            Github
-          </a>
-        </li>
-    
-        <li class="waves-block waves-effect">
-          <a href="/404"  >
-            <i class="icon icon-lg icon-link"></i>
-            测试
-          </a>
-        </li>
-    
-  </ul>
-
-  <footer class="footer">
-  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
-  <p>Charles Wei&#39;s Blog &copy; 2016</p>
-  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
-  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
-  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
-</footer>
-
+  <p class="site-subtitle">Why so serious?</p>
 </div>
 
-  </nav>
-  <main id="main">
-    <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">Hexo的安装和使用（mac篇）</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
-        
-    </div>
-</header>
-<header class="content-header">
-  <div class="container">
-    <h1 class="author">Hexo的安装和使用（mac篇）</h1>
-    <h5 class="subtitle">
-        
-            <time datetime="2016-07-21T13:54:41.000Z" itemprop="datePublished" class="page-time">
-  2016-07-21
-</time>
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
 
+<nav class="site-nav">
+  
 
+  
+    <ul id="menu" class="menu">
+      
         
-    </h5>
-  </div>
-</header>
-
-    <div class="container body-wrap">
-      <article id="post-HowToInstallHexoForMac" 
-  class="article article-type-post" itemprop="blogPost">
-    <div class="post-meat flex-row">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </div>
-    <div class="post-body">
-        <aside class="post-widget" id="post-widget">
-
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
             
-            <div class="post-share" id="post-share">
-    <div class="tit">分享到：</div>
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
-        </a>
-      </li>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
     </ul>
+  
+
+  
+</nav>
+
  </div>
+    </header>
 
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
             
 
-            
-            <nav class="post-toc-wrap" id="post-toc">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装前提"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">安装前提</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Hexo"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">安装Hexo</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#初始化Hexo"><span class="post-toc-number">3.</span> <span class="post-toc-text">初始化Hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置"><span class="post-toc-number">4.</span> <span class="post-toc-text">配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#与Github账户关联"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">与Github账户关联</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#hexo的基本配置"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">hexo的基本配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主题配置"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">主题配置</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#menu"><span class="post-toc-number"></span> <span class="post-toc-text">menu:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#link-fontawesome图标，省略前缀，本主题前缀为-icon-，必须"><span class="post-toc-number"></span> <span class="post-toc-text">link: fontawesome图标，省略前缀，本主题前缀为 icon-，必须</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#text-About-菜单显示的文字，如果省略即默认与图标一致，首字母会转大写"><span class="post-toc-number"></span> <span class="post-toc-text">text: About 菜单显示的文字，如果省略即默认与图标一致，首字母会转大写</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#url-about-链接，绝对或相对路径，必须。"><span class="post-toc-number"></span> <span class="post-toc-text">url: /about 链接，绝对或相对路径，必须。</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#target-blank-是否跳出，省略则在当前页面打开"><span class="post-toc-number"></span> <span class="post-toc-text">target: _blank 是否跳出，省略则在当前页面打开</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Content"><span class="post-toc-number"></span> <span class="post-toc-text">Content</span></a>
-            </nav>
-            
-        </aside>
+  <div id="posts" class="posts-expand">
+    
 
-        <div class="post-main">
+  
+  
 
-            <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。官方文档<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">传送门</a>。Hexo的安装是个很快速简便的过程，但依然还是有不少坑。这里记录个我的安装过程，给大家一些参考。以下是我安装时系统及软件版本，请尽量保证不低于这些版本号：</p>
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hexo的安装和使用（mac篇）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-21T21:54:41+08:00" content="2016-07-21">
+              2016-07-21
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。官方文档<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">传送门</a>。Hexo的安装是个很快速简便的过程，但依然还是有不少坑。这里记录个我的安装过程，给大家一些参考。以下是我安装时系统及软件版本，请尽量保证不低于这些版本号：</p>
 <ul>
 <li><p>OS ： OS X EI Capitan 10.11.3</p>
 </li>
@@ -273,112 +362,246 @@ XCode :">
 <p>#toc: false  关闭toc<br>toc:<br>  list_number: true # 是否显示数字排序</p>
 <p>#浏览器标签栏小图标<br>favicon: /favicon.ico<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">最后生成部署，来看看效果吧</div><div class="line">```bash</div><div class="line">hexo clean</div><div class="line">hexo d -g</div></pre></td></tr></table></figure></p>
 
-            <blockquote>
-                <p>
-                本文地址：
-                <a href="http://charleswei.me/2016/07/21/HowToInstallHexoForMac/" target="_blank" rel="external">http://charleswei.me/2016/07/21/HowToInstallHexoForMac/</a>
-                </p>
-                <footer><cite><a href="http://charleswei.me">@Charles Wei's Blog</a></cite></footer>
-            </blockquote>
-            </div>
-            
-<nav class="post-nav">
-  
-    <div class="waves-block waves-effect prev fl">
-      <a href="/2016/07/24/Android-CrashHandler/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Android_CrashHandler</h4>
-      </a>
+      
     </div>
-  
 
-  
-</nav>
+    <div>
+      
+        
 
+      
+    </div>
 
-            
-            
+    <div>
+      
+        
 
+      
+    </div>
 
-
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
         </div>
-    </div>
-</article>
-    </div>
-  </main>
-<div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+      
 
-<script>
-var BLOG_SHARE = {
-    title: "Hexo的安装和使用（mac篇）",
-    pic: "/img/logo.jpg",
-    summary: document.getElementsByName('summary')[0].content,
-    url: "http://charleswei.me/2016/07/21/HowToInstallHexoForMac/index.html"
-};
-</script>
-<div class="global-share" id="global-share">
-    <div class="tit">分享到：</div>
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
-        </a>
-      </li>
-    </ul>
- </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/24/Android-CrashHandler/" rel="prev" title="Android_CrashHandler 自定义崩溃异常捕获">
+                Android_CrashHandler 自定义崩溃异常捕获 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
 
 
 
-<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-
-<script src="/js/main.js"></script>
-
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
 </div>
-<script type="text/template" id="search-tpl">
-<li class="item">
-    <a href="/{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
         </div>
-    </a>
-</li>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/joker_head.jpg"
+               alt="Charles Wei" />
+          <p class="site-author-name" itemprop="name">Charles Wei</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/glassweichao" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装前提"><span class="nav-number">2.1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化Hexo"><span class="nav-number">3.</span> <span class="nav-text">初始化Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">4.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#与Github账户关联"><span class="nav-number">4.1.</span> <span class="nav-text">与Github账户关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo的基本配置"><span class="nav-number">4.2.</span> <span class="nav-text">hexo的基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题配置"><span class="nav-number">4.3.</span> <span class="nav-text">主题配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#menu"><span class="nav-number"></span> <span class="nav-text">menu:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#link-fontawesome图标，省略前缀，本主题前缀为-icon-，必须"><span class="nav-number"></span> <span class="nav-text">link: fontawesome图标，省略前缀，本主题前缀为 icon-，必须</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-About-菜单显示的文字，如果省略即默认与图标一致，首字母会转大写"><span class="nav-number"></span> <span class="nav-text">text: About 菜单显示的文字，如果省略即默认与图标一致，首字母会转大写</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#url-about-链接，绝对或相对路径，必须。"><span class="nav-number"></span> <span class="nav-text">url: /about 链接，绝对或相对路径，必须。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#target-blank-是否跳出，省略则在当前页面打开"><span class="nav-number"></span> <span class="nav-text">target: _blank 是否跳出，省略则在当前页面打开</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Content"><span class="nav-number"></span> <span class="nav-text">Content</span></a></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Charles Wei</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<script src="/js/search.js"></script>
 
 
 
@@ -387,6 +610,71 @@ var BLOG_SHARE = {
 
 
 
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>
